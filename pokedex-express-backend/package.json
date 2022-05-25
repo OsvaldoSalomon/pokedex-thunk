@@ -8,7 +8,8 @@
     "db:migrate": "dotenv sequelize-cli db:migrate",
     "db:seed:all": "dotenv sequelize-cli db:seed:all",
     "start:development": "dotenv nodemon ./bin/www",
-    "start:production": "dotenv ./bin/www"
+    "start:production": "dotenv ./bin/www",
+    "clean": "npx dotenv sequelize db:drop && npx dotenv sequelize db:create && npx dotenv sequelize db:migrate && npx dotenv sequelize db:seed:all"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
